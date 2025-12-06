@@ -1,0 +1,81 @@
+Covid19-Demographic-Analyzer
+✅ Prerequisites
+
+Before you set up and run the project, ensure your machine has the following installed:
+
+Node.js (LTS version recommended, e.g. ≥ 16.x)
+
+npm (comes bundled with Node.js)
+
+MongoDB (local MongoDB server, or a remote MongoDB URI)
+
+A code editor (e.g. Visual Studio Code)
+
+Optionally, you may also want to have tools like git (to clone the repo) and a Postman-like tool (for testing API endpoints).
+
+🛠️ Setup & Installation (on another PC)
+
+Follow these steps to get the project up and running:
+
+# 1. Clone the repository
+git clone https://github.com/PrashoHaran/Covid19-Demographic-Analyzer.git  
+cd Covid19-Demographic-Analyzer
+
+# 2. Install dependencies for backend
+cd backend  
+npm install  
+
+# 3. Install dependencies for frontend (if applicable)
+cd ../frontend  
+npm install  
+
+# 4. Configure environment variables
+#    Copy the example env file (if exists) and update with your configuration.
+#    For example:
+cp ../backend/.env.example ../backend/.env  
+
+#    Then open ../backend/.env and set values like:
+#    MONGODB_URI = your-mongodb-connection-string
+#    PORT = 3000   (or your preferred port)
+#    (Any other variables your project requires)
+
+# 5. Start the backend server
+cd ../backend  
+npm start        # or “npm run dev” if you use nodemon
+
+# 6. Start the frontend (if applicable)
+cd ../frontend  
+npm start
+
+# 7. Open the application
+#    Go to http://localhost:<PORT> in your browser (e.g. http://localhost:3000)
+
+📁 Project Structure (after cloning)
+Covid19-Demographic-Analyzer/
+├── backend/        # Node.js + Express server, API endpoints, database logic
+├── frontend/       # Frontend UI (HTML/CSS/JS) for user interaction
+├── README.md       # Project documentation
+└── .gitignore      # Files/folders to ignore in version control
+
+🔧 Configuration
+
+MongoDB connection:
+
+In backend/.env, set MONGODB_URI to either your local MongoDB instance (e.g. mongodb://localhost:27017/yourdbname) or a remote MongoDB service URI.
+
+Port configuration:
+
+If your server uses environment variable for port (e.g. PORT), confirm that port isn’t already in use.
+
+CORS / Frontend origin:
+
+If your frontend and backend run on different ports (or domains), ensure that CORS settings in backend allow requests from your frontend origin.
+
+🚀 Running & Testing
+
+Use a REST client (e.g., Postman) or frontend UI to send requests.
+
+Typical endpoints: POST /submit to fetch data from public APIs and store in MongoDB; GET /records to retrieve stored data.
+
+Confirm that MongoDB is running and connection string is correct before starting the server.
+ 
