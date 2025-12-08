@@ -9,7 +9,6 @@ Built for students, researchers, and data enthusiasts, this application combines
 
 - **Country Search:** View real-time COVID-19 statistics and essential demographic data (population, region, flag, currency).
 - **Computed Metrics:** Automatic calculation of cases per million, deaths per million, and vaccination percentages.
-- **History Tracking:** Save country snapshots and revisit your lookup history anytime.
 - **User Authentication:** Secure Google OAuth login + JWT-based protected routes.
 - **Data Aggregation:** Combines multiple public APIs into one unified result.
 - **Responsive UI:** Clean, simple interface using HTML, CSS, JS (or Handlebars).
@@ -21,7 +20,7 @@ Built for students, researchers, and data enthusiasts, this application combines
 ```
 Covid19-Demographic-Analyzer/
 ├── backend/        # Node.js + Express server, API endpoints, database logic
-├── frontend/       # Frontend UI (HTML/CSS/JS) for user interaction
+├── frontend/       # Frontend UI (React Framework) for user interaction
 ├── README.md       # Project documentation
 └── .gitignore      # Files/folders to ignore in version control
 ```
@@ -43,13 +42,19 @@ cd backend
 npm install
 # Configure .env
 # Add your MongoDB URI, JWT secret, Google OAuth keys, and optional API keys
-npm start   # or npm run dev
+npm run dev
+npx nodemon .\server.js  #Without installing nodemon dependency
 ```
 
-### 3. Launch Client
+### 3. Setup frontend
 
-Open `frontend/` in your browser using a local server (e.g., Live Server extension in VS Code).
-
+```sh
+cd frontend
+npm install
+# Add Public API to .env
+npm run dev   # For Development
+npm start     # For Production
+```
 ---
 
 ## 🔐 Authentication
@@ -77,7 +82,7 @@ Open `frontend/` in your browser using a local server (e.g., Live Server extensi
 
 ## 🎨 UI/UX Highlights
 
-- Clean and Simple UI: Lightweight HTML/CSS/JS for fast performance.
+- Clean and Simple UI: React/Node.js for fast performance.
 - Responsive Design: Works smoothly on both desktop and mobile.
 - User-Friendly Flow: Search → View Data → Compute Metrics → Save Snapshot.
 
