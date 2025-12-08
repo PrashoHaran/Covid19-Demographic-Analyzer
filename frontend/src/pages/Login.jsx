@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Eye, EyeOff, Loader2 } from 'lucide-react'
+import { Eye, EyeOff, Loader2, ArrowLeft } from 'lucide-react'
 import { toast } from 'sonner'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
@@ -62,6 +62,16 @@ const Login = () => {
     return (
         <div className='relative w-full max-h-screen md:h-full bg-green-100 overflow-hidden'>
             <div className='min-h-screen flex flex-col to-muted/20'>
+                <div className='p-4'>
+                    <Button 
+                        onClick={() => navigate('/')} 
+                        variant="ghost" 
+                        className='flex items-center gap-2 text-gray-700 hover:text-green-600'
+                    >
+                        <ArrowLeft className='w-4 h-4' />
+                        Back
+                    </Button>
+                </div>
                 <div className='flex-1 flex items-center justify-center p-4'>
                     <div className='w-full max-w-md space-y-6 flex flex-col items-center'>
                         <div className='text-center space-y-2'>
@@ -135,14 +145,14 @@ const Login = () => {
                                 <Button onClick={()=>window.open("http://localhost:8000/auth/google", "_self")} className='w-full' variant='outline'>
                                     <img src={Google} alt="" className='w-5'/>
                                     Login with Google
-                                    </Button>
+                                </Button>
 
-   <CardFooter className='flex justify-center text-sm'>
-                                <p>
-                                If you have not account Please{" "}
-                                    <Link to={'/signup'} className='text-green-600 hover:underline font-medium relative'>Sign in</Link>
-                                </p>
-                            </CardFooter>
+                                <CardFooter className='flex justify-center text-sm'>
+                                    <p>
+                                        If you have not account Please{" "}
+                                        <Link to={'/signup'} className='text-green-600 hover:underline font-medium relative'>Sign in</Link>
+                                    </p>
+                                </CardFooter>
                             </CardFooter>
                         </Card>
                     </div>

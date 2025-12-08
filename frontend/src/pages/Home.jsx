@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { BarChart3, Map, TrendingUp, Users, Shield, Activity, Globe, Database, Code, Github } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [stats, setStats] = useState({
@@ -94,9 +95,12 @@ const Home = () => {
               featuring real-time visualizations, analytical dashboards, and predictive insights.
             </p>
             <div className="flex flex-wrap gap-4">
-              <button className="px-8 py-3 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
+              <Link
+                to="/countries" >
+                <button className="px-8 py-3 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
                 Explore Dashboard
               </button>
+              </Link>
               
             </div>
           </div>
