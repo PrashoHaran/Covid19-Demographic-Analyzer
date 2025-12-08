@@ -18,37 +18,37 @@ Built for students, researchers, and data enthusiasts, this application combines
 
 ## 🗂️ Project Structure
 
-```
+\`\`\`
 Covid19-Demographic-Analyzer/
 ├── backend/        # Node.js + Express server, API endpoints, database logic
 ├── frontend/       # Frontend UI (HTML/CSS/JS) for user interaction
 ├── README.md       # Project documentation
 └── .gitignore      # Files/folders to ignore in version control
-```
+\`\`\`
 ---
 
 ## 🚀 Getting Started
 
 ### 1. Clone the Repository
 
-```sh
+\`\`\`sh
 git clone https://github.com/PrashoHaran/Covid19-Demographic-Analyzer.git  
 cd Covid19-Demographic-Analyzer
-```
+\`\`\`
 
 ### 2. Setup Backend
 
-```sh
+\`\`\`sh
 cd backend
 npm install
 # Configure .env
 # Add your MongoDB URI, JWT secret, Google OAuth keys, and optional API keys
 npm start   # or npm run dev
-```
+\`\`\`
 
 ### 3. Launch Client
 
-Open `frontend/` in your browser using a local server (e.g., Live Server extension in VS Code).
+Open \`frontend/\` in your browser using a local server (e.g., Live Server extension in VS Code).
 
 ---
 
@@ -98,4 +98,8 @@ Whether you're analyzing trends, comparing countries, or studying pandemic-relat
 ---
 
 **Stay Safe & Stay Informed.** 🦠📊✨
- 
+
+# commit & push
+git add README.md
+git commit -m "chore: update README with polished project description"
+git push
